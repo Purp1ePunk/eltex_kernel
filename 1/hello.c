@@ -1,7 +1,7 @@
 #include <linux/module.h>    // included for all kernel modules
 #include <linux/kernel.h>    // included for KERN_INFO
 #include <linux/init.h>      // included for __init and __exit macros
-  
+
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("Purple");
 MODULE_DESCRIPTION("Test module.");
