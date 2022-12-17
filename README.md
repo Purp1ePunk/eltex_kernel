@@ -35,6 +35,15 @@ test123456
 
 Запуск:
 1) make
-После запуска Makefile в директории появится netlink_client и netlink_main.ko
-3) sudo insmod netlink_main.ko
-4) ./netlink_client
+После запуска Makefile в директории появятся netlink_client и netlink_main.ko
+2) sudo insmod netlink_main.ko
+3) ./netlink_client
+
+### test_chardev.c
+Модуль для создания символьного драйвера. Работа драйвера заключается в выводе количества чтений dev-файла.
+
+Запуск:
+1) make
+2) sudo insmod
+3) sudo cat /dev/test_chardev
+I already told you 12 times Hello world!
