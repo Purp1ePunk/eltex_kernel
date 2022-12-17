@@ -1,0 +1,11 @@
+result: 1.o lib.o
+	gcc -o result 1.o lib.o
+
+add.o: lib.c
+	gcc -c lib.c
+	
+1.o: 1.c lib.h
+	gcc -c 1.c
+
+clean:
+	rm *.o result

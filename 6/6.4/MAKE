@@ -1,0 +1,17 @@
+result : dynamiclib 1.o
+	gcc 1.c -o result -ldl
+
+dynamiclib : lib1.o lib2.o
+	gcc -shared lib1.c lib2.c -o libtest.so
+	
+1.o : 1.c
+	gcc -c 1.c
+
+lib1.o : lib1.c
+	gcc -fPIC -c lib1.c
+
+lib2.o : lib2.c
+	gcc -fPIC -c lib2.c
+	
+clean : 
+	rm -f *.o libtest.so result
